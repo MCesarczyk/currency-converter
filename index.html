@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Ubuntu:wght@300;400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" />
+    <link href="/css/global.css" rel="stylesheet">
+    <link href="/css/form.css" rel="stylesheet">
+    <script defer src="/js/script.js"></script>
+    <title>e-kantor</title>
+</head>
+
+<body>
+    <div class="container">
+        <form class="form js-form" action="https://postman-echo.com/get">
+            <fieldset class="form__fieldset">
+                <legend class="form__legend">e-kantor</legend>
+                <p>
+                    <label class="form__label">
+                        Kwota w PLN <input class="form__input js-pln" placeholder="Kwota w PLN" type="number" min="0"
+                            step="any" required autofocus>
+                    </label>
+                </p>
+            </fieldset>
+            <fieldset class="form__fieldset">
+                <legend class="form__legend">Aktualny kurs</legend>
+                <p>
+                    <label class="form__label">
+                        EUR Euro <input class="form__input js-ratio" value=4.5481 type="number" min="0.0001"
+                            step="0.0001" required>
+                    </label>
+                </p>
+            </fieldset>
+            <fieldset class="form__fieldset">
+                <legend class="form__legend">Otrzymana kwota</legend>
+                <p class="form__result js-result">&nbsp;</p>
+                <div class="form__buttonContainer">
+                    <button class="form__button">Przelicz</button>
+                    <button class="form__button js-reset" type="reset">Wyczyść
+                        formularz</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+
+</html>
